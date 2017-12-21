@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0022)http://127.0.0.1:5507/ -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+   
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">   
+<SCRIPT type="application/shiny-singletons"></SCRIPT>
+   
+<SCRIPT type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[1.0.5];ionrangeslider[2.1.6];strftime[0.9.2];htmlwidgets[0.9];plotly-binding[4.7.1];bootstrap[3.3.7]</SCRIPT>
+ 
+<SCRIPT src="Language%20Detection_files/json2-min.js"></SCRIPT>
+ 
+<SCRIPT src="Language%20Detection_files/jquery.min.js"></SCRIPT>
+ <LINK href="Language%20Detection_files/shiny.css" rel="stylesheet"> 
+<SCRIPT src="Language%20Detection_files/shiny.min.js"></SCRIPT>
+ <LINK href="Language%20Detection_files/ion.rangeSlider.css" rel="stylesheet"> 
+<LINK href="Language%20Detection_files/ion.rangeSlider.skinShiny.css" rel="stylesheet"> 
+<SCRIPT src="Language%20Detection_files/ion.rangeSlider.min.js"></SCRIPT>
+ 
+<SCRIPT src="Language%20Detection_files/strftime-min.js"></SCRIPT>
+ 
+<SCRIPT src="Language%20Detection_files/htmlwidgets.js"></SCRIPT>
+ 
+<SCRIPT src="Language%20Detection_files/plotly.js"></SCRIPT>
+ 
+<META name="viewport" content="width=device-width, initial-scale=1"> <LINK href="Language%20Detection_files/bootstrap.min.css" 
+rel="stylesheet"> 
+<SCRIPT src="Language%20Detection_files/bootstrap.min.js"></SCRIPT>
+ 
+<SCRIPT src="Language%20Detection_files/html5shiv.min.js"></SCRIPT>
+ 
+<SCRIPT src="Language%20Detection_files/respond.min.js"></SCRIPT>
+  <TITLE>Detecting the language of a text</TITLE> 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY>
+<DIV class="container-fluid">
+<H2>Detecting the language of a text</H2>
+<P>      This app determines the language(s) that a text is probably written in, 
+     by comparing its words to the most frequent words of several languages     
+</P>
+<P><EM>        Supported languages: Afrikaans (Afrikaans), Breton (brezhoneg),   
+     Bosnian (bosanski jezik), Catalan (català), Czech (čeština),        Danish 
+(dansk), German (Deutsch), English, Esperanto (Esperanto),        Spanish 
+(Español), Estonian (eesti), Basque (euskara),        Finnish (suomi), French 
+(français), Galician (galego),        Croatian (hrvatski jezik), Hungarian 
+(magyar),        Indonesian (Bahasa Indonesia), Icelandic (Íslenska),        
+Italian (Italiano), Lithuanian (lietuvių kalba),        Latvian (latviešu 
+valoda), Malay (bahasa Melayu),        Dutch (Nederlands, Vlaams), Norwegian 
+(Norsk),        Polish (język polski), Portuguese (Português), Romanian 
+(Română),         Slovak (slovenčina), Slovene (slovenski jezik), Albanian 
+(Shqip),        Serbian (srpski), Swedish (svenska), Tagalog (Wikang Tagalog),   
+     and Turkish (Türkçe).       </EM>     </P>
+<P><STRONG>        To get started, enter some text in the text box below (the    
+    longer the better),       </STRONG>      and (optionally) adjust the number 
+of words of the target languages to      use for the comparisons (the default 
+should be fine, use less words for      a faster but less accurate assessment, 
+use more words for slower but      finer comparisons).     </P>
+<P>You will then be able to select a language to visually compare the frequency 
+of its most common words with the frequency of the words in the text.</P>
+<DIV class="row">
+<DIV class="col-sm-4">
+<FORM class="well">
+<DIV class="form-group shiny-input-container"><LABEL for="txt">Text to detect 
+the language of:</LABEL>             
+<TEXTAREA class="form-control" id="txt" style="height: 300px;" placeholder="Enter some text here">Enter some text here</TEXTAREA></DIV>
+<DIV class="form-group shiny-input-container"><LABEL class="control-label" for="nWordsInCorpora">Number 
+of words in corpora to use to detect language:</LABEL>             <INPUT class="js-range-slider" id="nWordsInCorpora" data-data-type="number" data-keyboard-step="0.02000400080016" data-keyboard="true" data-prettify-enabled="true" data-prettify-separator="," data-grid-snap="false" data-grid-num="9.998" data-grid="true" data-step="1" data-from="500" data-max="5000" data-min="1"> 
+          </DIV></FORM></DIV>
+<DIV class="col-sm-8">
+<H4>Detected language(s)</H4>
+<DIV class="shiny-text-output" id="language"></DIV>
+<H4>Highest language-matching scores</H4>
+<DIV class="plotly html-widget html-widget-output" id="scorePlot" style="width: 100%; height: 400px;"></DIV>
+<P>          Click on a language bar in the graph above to compare the          
+frequencies of the words in the text and in the corpus of          the selected 
+language.         </P>
+<H4></H4>
+<P></P>
+<DIV class="plotly html-widget html-widget-output" style="width: 100%; height: 400px;"></DIV>
+<H4></H4>
+<P></P>
+<P><EM></EM>                   </P>
+<DIV class="plotly html-widget html-widget-output" style="width: 100%; height: 400px;"></DIV></DIV></DIV></DIV></BODY></HTML>
